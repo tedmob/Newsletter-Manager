@@ -5,5 +5,6 @@
 	//require_once("main.php");
 	
 	$model = new model();
+	
 	echo $model->insert($_POST['model'],$_POST['subject'],$_POST['txt']);
 ?>

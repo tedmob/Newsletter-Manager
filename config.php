@@ -1,19 +1,19 @@
 <?php
 $config = array(
     "db" => array(
-		"name" 	=> "databasename",
-		"username" 	=> "databaseuser",
-		"password" 	=> "databasepassword",
-		"host" 		=> "databasehost"
+		"name" 	=> "newsletter-manager",
+		"username" 	=> "root",
+		"password" 	=> "",
+		"host" 		=> "localhost"
     ),
     "urls" => array(
-        "baseUrl" 	=> "/newsletter/",
+        "baseUrl" 	=> "/newsletter-manager/",
 		"root"	  	=> "/"
     ),
 	"resource" => array(
-		"js"		=> "/newsletter/js/",
-		"css"		=> "/newsletter/css/",
-		"3part"		=> "/newsletter/resource/"	
+		"js"		=> "/newsletter-manager/js/",
+		"css"		=> "/newsletter-manager/css/",
+		"3part"		=> "/newsletter-manager/resource/"	
 	)
 );
  
