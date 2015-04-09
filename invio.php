@@ -50,11 +50,12 @@
 				$txt .= "<tbody>";
 					while($r = $db->fetch()){
 						$mail->ClearAddresses();
+						$text = "<div style='width: 960px; margin: auto'>".$r['text']."</div>";
 						$txt .= "<tr>";
 							$txt .= "<td>".$r['user']."</td>";
 							$txt .= "<td>".$r['email']."</td>";
 							$txt .= "<td>".$r['model']."</td>";
-							$txt .= "<td>".sendMail($r['email'], $r['subject'], $r['text'], $r['id'], $r['id_u'], $r['id_m'])."</td>";
+							$txt .= "<td>".sendMail($r['email'], $r['subject'], $text, $r['id'], $r['id_u'], $r['id_m'])."</td>";
 						$txt .= "</tr>";
 					}
 				$txt .= "</tbody>";

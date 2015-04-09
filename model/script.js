@@ -84,6 +84,8 @@ $(function() {
   tinyMCE.init({
 	  selector: '.tiny',
 	  language : "it", 
+	  width : "690px",
+	  height: "690px",
 	  plugins: [
 		"advlist autolink lists link image charmap print preview anchor",
 		"searchreplace visualblocks code fullscreen",

@@ -29,22 +29,24 @@ $(document).ready(function(e) {
 		return false;
 	});
 	$("#model_form").submit(function(){
-		//prendo xml creato con il filtraggio e aggiungo ogni elemento alla tabella list per un successivo invio
-		if(mex!=null){
-			msg = $.parseXML(mex);
-			$(msg).find("user").each(function(index, element) {
-				$.ajax({
-					url: "send/list_add.php",
-					type: "POST",
-					data: {model: $("#model_selected").val(), user: $(this).find("id").text()},
-					success: function(msg){
-						console.debug(msg);
-					},
-					error: function(uno, due, tre){
-						alert(uno+" - "+ due+" - "+tre);	
-					}
-				});
-			});	
+		if(confirm("Sei sicuro di voler aggiungere gli elementi alla coda di invio?")){
+			//prendo xml creato con il filtraggio e aggiungo ogni elemento alla tabella list per un successivo invio
+			if(mex!=null){
+				msg = $.parseXML(mex);
+				$(msg).find("user").each(function(index, element) {
+					$.ajax({
+						url: "send/list_add.php",
+						type: "POST",
+						data: {model: $("#model_selected").val(), user: $(this).find("id").text()},
+						success: function(msg){
+							alert(msg);
+						},
+						error: function(uno, due, tre){
+							alert(uno+" - "+ due+" - "+tre);	
+						}
+					});
+				});	
+			}
 		}
 		return false;
 	});

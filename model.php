@@ -9,6 +9,7 @@
 			$model = new model();
 		?>
         <script type="text/javascript" src="<?php echo $config['resource']['3part']; ?>tinymce/tinymce.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo $config['urls']['baseUrl']; ?>model/style.css">
         <meta charset="utf-8">
         <title>Newsletter Manager</title>
     </head>
